@@ -181,7 +181,7 @@ class imcCalculator : AppCompatActivity() {
                 var conexion:Connection=DriverManager.getConnection(jdbcUrl,usuario ,contrasena)
                 Log.i("Gabriel","para ver")
                 var statement:Statement=conexion.createStatement()
-                Log.i("Gabriel","Paso Bien")
+                Log.i("Gabriel","Paso Bien ya esta hecha la conexion")
                 val icm=calculateIMC()
                 var resultSet: ResultSet = statement.executeQuery("INSERT INTO icm(dni_persona,icm,altura,peso,edad) VALUES(43213252,"+icm+","+currentHeight+","+currentWeight+","+currentAge+")")
 
