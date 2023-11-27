@@ -183,7 +183,7 @@ class imcCalculator : AppCompatActivity() {
                 var statement:Statement=conexion.createStatement()
                 Log.i("Gabriel","Paso Bien ya esta hecha la conexion")
                 val icm=calculateIMC()
-                var resultSet: ResultSet = statement.executeQuery("INSERT INTO icm(dni_persona,icm,altura,peso,edad) VALUES(43213252,"+icm+","+currentHeight+","+currentWeight+","+currentAge+")")
+                var resultSet: ResultSet = statement.executeQuery("INSERT INTO IMC_DATOS(icm,altura_IMC,peso,edad,sexo) VALUES("+icm+","+currentHeight+","+currentWeight+",,"+currentAge+","+ if (isMaleSelected) "masculino" else "Femenino"+")")
 
                 resultSet.next()
 
